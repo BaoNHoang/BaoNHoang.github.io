@@ -2,60 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Homepage - Bao Hoang</title>
-    <meta name="description" content="A website for Bao Hoang.">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="author" content="Bao Hoang">
-    <meta http-equiv="refresh" content="9">
-    <script src=mobileview.js></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Background - Bao Hoang</title>
+
+    <meta name="description" content="Background page for Bao Hoang." />
+    <meta name="keywords" content="Bao Hoang, Background, Vietnam, Portfolio" />
+    <meta name="author" content="Bao Hoang" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Background video script -->
+    <script src="video.js" defer></script>
 </head>
 
 <body>
-    <video autoplay muted id="myVideo" playsinline>
-        <source type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <script src="video.js"></script>
-    
+
+    <!-- Full-page rotating background video -->
+    <video autoplay muted playsinline id="myVideo"></video>
+
+    <!-- Dark overlay so content is readable -->
+    <div class="video-overlay"></div>
+
     <nav>
-        <ul id="navbuttons">
-            <li><a id="buttons" href="./">Home</a></li>
-            <li><a id="buttons" href="./career">Career</a></li>
-            <li><a id="buttons" href="./education">Education</a></li>
-            <li><a id="buttons" href="./background">Background</a></li>
-            <li><a id="buttons" href="./hobbies">Hobbies</a></li>
+        <ul class="navbuttons">
+            <li><a class="buttons" href="./">Home</a></li>
+            <li><a class="buttons" href="./career">Career</a></li>
+            <li><a class="buttons" href="./education">Education</a></li>
+            <li><a class="buttons active" href="./background">Background</a></li>
+            <li><a class="buttons" href="./hobbies">Hobbies</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1 style="font-family: 'Times New Roman', Times, serif; margin-top: 20px;">Background</h1>
+        <h1>Background</h1>
+        <p>Where I come from and the experiences that shaped me</p>
     </header>
 
-<section>
-    <h2>Birth</h2>
-    <p>
-        Bao was born in <strong>Da Lat, Vietnam</strong> and later moved to the 
-        United States, where he began his elementary school education.
-    </p>
-</section>
+    <main>
+        <section class="content-card">
+            <h2>Birth</h2>
+
+            <div class="info-block">
+                <h3>Da Lat, Vietnam</h3>
+                <p>
+                    I was born in <strong>Da Lat, Vietnam</strong> and later moved to the
+                    United States, where I began my elementary school education.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>My Journey</h2>
+
+            <p>
+                Moving from Vietnam to the United States gave me a unique perspective on
+                growth, adaptation, and perseverance. It taught me how to adjust to new
+                environments, learn from challenges, and stay motivated toward my goals.
+            </p>
+
+            <p>
+                These experiences helped shape my work ethic and my interest in technology.
+                As a computer science student, I want to use software development as a way
+                to solve problems, create useful tools, and build things that can make a real impact.
+            </p>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank">
-                <img src="linkedin.jpg" alt="LinkedIn">
+                <img src="linkedin.jpg" alt="LinkedIn" />
             </a>
-            <a href=https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing"
+
+            <a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing"
                 target="_blank">
-                <img src="RESUME (1).png" alt="Resume">
+                <img src="RESUME (1).png" alt="Resume" />
             </a>
         </div>
+
         <div id="copyright">
             <p>&copy; 2024 Bao Hoang. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 
 </html>

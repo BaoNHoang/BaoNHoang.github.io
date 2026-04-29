@@ -2,79 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Homepage - Bao Hoang</title>
-    <meta name="description" content="A website for Bao Hoang.">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="author" content="Bao Hoang">
-    <meta http-equiv="refresh" content="9">
-    <script src=mobileview.js></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Education - Bao Hoang</title>
+
+    <meta name="description" content="Education page for Bao Hoang." />
+    <meta name="keywords" content="Bao Hoang, Education, Computer Science, Christopher Newport University" />
+    <meta name="author" content="Bao Hoang" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="video.js" defer></script>
 </head>
 
 <body>
-    <video autoplay muted id="myVideo" playsinline>
-        <source type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <script src="video.js"></script>
+
+    <video autoplay muted playsinline id="myVideo"></video>
+
+    <div class="video-overlay"></div>
 
     <nav>
-        <ul id="navbuttons">
-            <li><a id="buttons" href="./">Home</a></li>
-            <li><a id="buttons" href="./career">Career</a></li>
-            <li><a id="buttons" href="./education">Education</a></li>
-            <li><a id="buttons" href="./background">Background</a></li>
-            <li><a id="buttons" href="./hobbies">Hobbies</a></li>
+        <ul class="navbuttons">
+            <li><a class="buttons" href="./">Home</a></li>
+            <li><a class="buttons" href="./career">Career</a></li>
+            <li><a class="buttons active" href="./education">Education</a></li>
+            <li><a class="buttons" href="./background">Background</a></li>
+            <li><a class="buttons" href="./hobbies">Hobbies</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1 style="font-family: 'Times New Roman', Times, serif; margin-top: 20px;">Education</h1>
+        <h1>Education</h1>
+        <p>My academic background, coursework, and current learning roadmap</p>
     </header>
 
-    <section>
-    <h2>Schooling</h2>
+    <main>
+        <section class="content-card">
+            <h2>Schooling</h2>
 
-    <h3>High School</h3>
-    <p>
-        Bao attended <strong>Grafton High School</strong> (Class of 2022), where he graduated with an 
-        <strong>Advanced Diploma</strong> and a <strong>4.5 GPA</strong>.
-    </p>
+            <div class="info-block">
+                <h3>High School</h3>
+                <p>
+                    I attended <strong>Grafton High School</strong>, where I graduated with an
+                    <strong>Advanced Diploma</strong>.
+                </p>
+            </div>
 
-    <h3>University</h3>
-    <p>
-        Bao is currently attending <strong>Christopher Newport University</strong>, pursuing a 
-        <strong>Bachelor of Science in Computer Science</strong>. He maintains a 
-        <strong>3.87 GPA</strong>.
-    </p>
-    <p>
-        <strong>Relevant Coursework:</strong> Programming for Data Manipulation, Data & File Structures, 
-        Discrete Structures, Algorithms, Software Engineering and Interfaces, Android Programming, 
-        Operating Systems, Database Management Systems.
-    </p>
+            <div class="info-block">
+                <h3>University</h3>
+                <p>
+                    I am currently attending <strong>Christopher Newport University</strong>, pursuing a
+                    <strong>Bachelor of Science in Computer Science</strong>.
+                </p>
+            </div>
+        </section>
 
-    <h3>Current Roadmap (Learn + Review)</h3>
-    <p>
-            Python => JavaScript => Node.JS => React.JS => Django => SPOTIFY APPS => C# => C++
-    </p>
-</section>
+        <section class="content-card">
+            <h2>Relevant Coursework</h2>
+
+            <div class="course-grid">
+                <li>Programming for Data Manipulation</li>
+                <li>Data & File Structures</li>
+                <li>Discrete Structures</li>
+                <li>Algorithms</li>
+                <li>Software Engineering and Interfaces</li>
+                <li>Android Programming</li>
+                <li>Operating Systems</li>
+                <li>Database Management Systems</li>
+                <li>UI/UX Design</li>
+                <li>UAS Drone Programming</li>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank">
-                <img src="linkedin.jpg" alt="LinkedIn">
+                <img src="linkedin.jpg" alt="LinkedIn" />
             </a>
+
             <a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing"
                 target="_blank">
-                <img src="RESUME (1).png" alt="Resume">
+                <img src="RESUME (1).png" alt="Resume" />
             </a>
         </div>
+
         <div id="copyright">
             <p>&copy; 2024 Bao Hoang. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 
 </html>

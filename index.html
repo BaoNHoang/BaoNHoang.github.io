@@ -2,78 +2,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Bao Hoang - Home</title>
-    <meta name="description" content="A website for Bao Hoang.">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="author" content="Bao Hoang">
-    <script src=mobileview.js></script>
+
+    <meta name="description" content="A website for Bao Hoang." />
+    <meta name="keywords" content="HTML, CSS, Bao Hoang, Computer Science, Portfolio" />
+    <meta name="author" content="Bao Hoang" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Video script -->
+    <script src="scripts/video.js" defer></script>
 </head>
 
-<body>  
-    <video autoplay muted id="myVideo" playsinline>
-        <source type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <script src="video.js"></script>
+<body>
+
+    <video autoplay muted playsinline id="myVideo"></video>
+
+    <div class="video-overlay"></div>
 
     <nav>
-        <ul id="navbuttons">
-            <li><a id="buttons" href="./">Home</a></li>
-            <li><a id="buttons" href="./career">Career</a></li>
-            <li><a id="buttons" href="./education">Education</a></li>
-            <li><a id="buttons" href="./background">Background</a></li>
-            <li><a id="buttons" href="./hobbies">Hobbies</a></li>
+        <ul class="navbuttons">
+            <li><a class="buttons active" href="./">Home</a></li>
+            <li><a class="buttons" href="./career">Career</a></li>
+            <li><a class="buttons" href="./education">Education</a></li>
+            <li><a class="buttons" href="./background">Background</a></li>
+            <li><a class="buttons" href="./hobbies">Hobbies</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1 style="font-family: 'Times New Roman', Times, serif; margin-top: 20px;"> Bao Hoang </h1>
-        <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px; margin-top: -15px;">Computer Science | Christopher Newport University</p>
+        <h1>Bao Hoang</h1>
+        <p>Computer Science | Christopher Newport University</p>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p id="aboutMe">
-        I am currently a college student pursuing a degree in the field of computer science. 
-        Whether it's coding or solving problems, I enjoy a good challenge. 
-        My goal is to contribute and make a real impact on the future of technology. 
-        I want to be part of creating solutions that change industries and work towards shaping a better tomorrow.</p>
+    <main>
+        <section class="content-card">
+            <h2>About Me</h2>
 
-        <h2>Projects</h2>
-        <p>Check out the latest projects:</p>
-        <ul id="navbuttons">
-            <li><a id="buttonspro" href="https://github.com/BaoNHoang/PlaceToEat">Place To Eat App</a></li>
-            <li><a id="buttonspro" href="https://github.com/BaoNHoang/Slots">Mini Slots Game</a></li>
-            <li><a id="buttonspro" href="https://github.com/BaoNHoang/BaoPongGame">Ping Pong Game</a></li>
-            <li><a id="buttonspro" href="https://github.com/BaoNHoang/SpaceInvaders">Space Invaders Game</a></li>
-        </ul>
-        <p>Future Project Plans:</p>
-        <ul>
-            <li>Web Based Music Searcher - Spotify API, React</li>
-            <li>Full Stack Spotify Music Player - Spotify API, Reach, Django</li>
-        </ul>
-        <h2>Contact</h2>
-        <p>Email: bao.hoang.22@cnu.edu</p>
-    </section>
+            <p id="aboutMe">
+                I am currently a college student pursuing a degree in computer science.
+                Whether it's coding, building projects, or solving problems, I enjoy a good challenge.
+                My goal is to contribute and make a real impact on the future of technology.
+                I want to be part of creating solutions that change industries and work toward shaping a better tomorrow.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>Projects</h2>
+            <p>Check out the latest projects:</p>
+
+            <div class="project-grid">
+                <a class="project-button" href="https://github.com/BaoNHoang/PlaceToEat" target="_blank">
+                    Place To Eat App
+                </a>
+
+                <a class="project-button" href="https://github.com/BaoNHoang/Slots" target="_blank">
+                    Mini Slots Game
+                </a>
+
+                <a class="project-button" href="https://github.com/BaoNHoang/BaoPongGame" target="_blank">
+                    Ping Pong Game
+                </a>
+
+                <a class="project-button" href="https://github.com/BaoNHoang/SpaceInvaders" target="_blank">
+                    Space Invaders Game
+                </a>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>Contact</h2>
+            <p>
+                Email:
+                <a class="email-link" href="mailto:bao.hoang.22@cnu.edu">
+                    bao.hoang.22@cnu.edu
+                </a>
+            </p>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank">
-                <img src="linkedin.jpg" alt="LinkedIn">
+                <img src="linkedin.jpg" alt="LinkedIn" />
             </a>
+
             <a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing"
                 target="_blank">
-                <img src="RESUME (1).png" alt="Resume">
+                <img src="RESUME (1).png" alt="Resume" />
             </a>
         </div>
+
         <div id="copyright">
             <p>&copy; 2024 Bao Hoang. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 
 </html>
-
