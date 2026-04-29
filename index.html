@@ -7,29 +7,26 @@
 
     <title>Bao Hoang - Home</title>
 
-    <meta name="description" content="A website for Bao Hoang." />
-    <meta name="keywords" content="HTML, CSS, Bao Hoang, Computer Science, Portfolio" />
+    <meta name="description" content="A personal portfolio website for Bao Hoang." />
+    <meta name="keywords" content="Bao Hoang, Portfolio, Computer Science, Christopher Newport University" />
     <meta name="author" content="Bao Hoang" />
 
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Video script -->
-    <script src="scripts/video.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./video.js" defer></script>
 </head>
 
 <body>
 
-    <video autoplay muted playsinline id="myVideo"></video>
-
+    <video id="myVideo" autoplay muted playsinline></video>
     <div class="video-overlay"></div>
 
     <nav>
         <ul class="navbuttons">
-            <li><a class="buttons active" href="./">Home</a></li>
-            <li><a class="buttons" href="./career">Career</a></li>
-            <li><a class="buttons" href="./education">Education</a></li>
-            <li><a class="buttons" href="./background">Background</a></li>
-            <li><a class="buttons" href="./hobbies">Hobbies</a></li>
+            <li><a class="buttons active" href="./index.html">Home</a></li>
+            <li><a class="buttons" href="./career.html">Career</a></li>
+            <li><a class="buttons" href="./education.html">Education</a></li>
+            <li><a class="buttons" href="./background.html">Background</a></li>
+            <li><a class="buttons" href="./hobbies.html">Hobbies</a></li>
         </ul>
     </nav>
 
@@ -41,18 +38,20 @@
     <main>
         <section class="content-card">
             <h2>About Me</h2>
-
-            <p id="aboutMe">
+            <p>
                 I am currently a college student pursuing a degree in computer science.
-                Whether it's coding, building projects, or solving problems, I enjoy a good challenge.
-                My goal is to contribute and make a real impact on the future of technology.
-                I want to be part of creating solutions that change industries and work toward shaping a better tomorrow.
+                Whether I am coding, building projects, or solving problems, I enjoy taking on challenges
+                that help me grow as a developer.
+            </p>
+            <p>
+                My goal is to contribute to meaningful technology that creates real impact.
+                I want to help build solutions that improve industries, support people, and shape a better future through software.
             </p>
         </section>
 
         <section class="content-card">
             <h2>Projects</h2>
-            <p>Check out the latest projects:</p>
+            <p>Check out some of my latest projects:</p>
 
             <div class="project-grid">
                 <a class="project-button" href="https://github.com/BaoNHoang/PlaceToEat" target="_blank">
@@ -74,6 +73,22 @@
         </section>
 
         <section class="content-card">
+            <h2>Future Project Plans</h2>
+
+            <ul class="future-projects">
+                <li>
+                    <strong>Web-Based Music Searcher</strong>
+                    <span>Spotify API, React</span>
+                </li>
+
+                <li>
+                    <strong>Full-Stack Spotify Music Player</strong>
+                    <span>Spotify API, React, Django</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-card">
             <h2>Contact</h2>
             <p>
                 Email:
@@ -87,12 +102,12 @@
     <footer>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank">
-                <img src="linkedin.jpg" alt="LinkedIn" />
+                <img src="./linkedin.jpg" alt="LinkedIn" />
             </a>
 
             <a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing"
                 target="_blank">
-                <img src="RESUME (1).png" alt="Resume" />
+                <img src="./resume.png" alt="Resume" />
             </a>
         </div>
 

@@ -11,24 +11,22 @@
     <meta name="keywords" content="Bao Hoang, Education, Computer Science, Christopher Newport University" />
     <meta name="author" content="Bao Hoang" />
 
-    <link rel="stylesheet" href="style.css" />
-
-    <script src="video.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./video.js" defer></script>
 </head>
 
 <body>
 
-    <video autoplay muted playsinline id="myVideo"></video>
-
+    <video id="myVideo" autoplay muted playsinline></video>
     <div class="video-overlay"></div>
 
     <nav>
         <ul class="navbuttons">
-            <li><a class="buttons" href="./">Home</a></li>
-            <li><a class="buttons" href="./career">Career</a></li>
-            <li><a class="buttons active" href="./education">Education</a></li>
-            <li><a class="buttons" href="./background">Background</a></li>
-            <li><a class="buttons" href="./hobbies">Hobbies</a></li>
+            <li><a class="buttons" href="./index.html">Home</a></li>
+            <li><a class="buttons" href="./career.html">Career</a></li>
+            <li><a class="buttons active" href="./education.html">Education</a></li>
+            <li><a class="buttons" href="./background.html">Background</a></li>
+            <li><a class="buttons" href="./hobbies.html">Hobbies</a></li>
         </ul>
     </nav>
 
@@ -62,30 +60,46 @@
             <h2>Relevant Coursework</h2>
 
             <div class="course-grid">
-                <li>Programming for Data Manipulation</li>
-                <li>Data & File Structures</li>
-                <li>Discrete Structures</li>
-                <li>Algorithms</li>
-                <li>Software Engineering and Interfaces</li>
-                <li>Android Programming</li>
-                <li>Operating Systems</li>
-                <li>Database Management Systems</li>
-                <li>UI/UX Design</li>
-                <li>UAS Drone Programming</li>
+                <span>Programming for Data Manipulation</span>
+                <span>Data & File Structures</span>
+                <span>Discrete Structures</span>
+                <span>Algorithms</span>
+                <span>Software Engineering and Interfaces</span>
+                <span>Android Programming</span>
+                <span>Operating Systems</span>
+                <span>Database Management Systems</span>
             </div>
         </section>
 
+        <section class="content-card">
+            <h2>Current Roadmap</h2>
+            <p>
+                My current focus is strengthening my full-stack development skills while continuing to build
+                projects that connect frontend, backend, APIs, databases, and real-world software tools.
+            </p>
+
+            <div class="roadmap">
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>React.js</span>
+                <span>Django</span>
+                <span>Spotify Apps</span>
+                <span>C#</span>
+                <span>C++</span>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank">
-                <img src="linkedin.jpg" alt="LinkedIn" />
+                <img src="./linkedin.jpg" alt="LinkedIn" />
             </a>
 
             <a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing"
                 target="_blank">
-                <img src="RESUME (1).png" alt="Resume" />
+                <img src="./resume.png" alt="Resume" />
             </a>
         </div>
 

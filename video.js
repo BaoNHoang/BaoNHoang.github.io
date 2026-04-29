@@ -1,8 +1,8 @@
 const videoSources = [
-    "videos/waterfall2.mp4",
-    "videos/bubble.mp4",
-    "videos/rain.mp4",
-    "videos/desert.mp4"
+    "./videos/waterfall2.mp4",
+    "./videos/bubble.mp4",
+    "./videos/rain.mp4",
+    "./videos/desert.mp4"
 ];
 
 function getNextRandomVideo() {
@@ -23,7 +23,7 @@ function changeVideo() {
     const videoElement = document.getElementById("myVideo");
 
     if (!videoElement) {
-        console.error("Could not find video element with id='myVideo'.");
+        console.error("Video element with id='myVideo' was not found.");
         return;
     }
 
@@ -32,16 +32,20 @@ function changeVideo() {
     videoElement.src = nextVideo;
     videoElement.load();
 
-    videoElement.play().catch((error) => {
-        console.error("Video autoplay failed:", error);
-    });
+    const playPromise = videoElement.play();
+
+    if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+            console.error("Video failed to autoplay:", error);
+        });
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const videoElement = document.getElementById("myVideo");
 
     if (!videoElement) {
-        console.error("Could not find video element with id='myVideo'.");
+        console.error("Video element with id='myVideo' was not found.");
         return;
     }
 

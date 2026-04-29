@@ -2,101 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Homepage - Bao Hoang</title>
-    <meta name="description" content="A website for Bao Hoang.">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="author" content="Bao Hoang">
-    <meta http-equiv="refresh" content="9">
-    <script src=mobileview.js></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Career - Bao Hoang</title>
+
+    <meta name="description" content="Career page for Bao Hoang." />
+    <meta name="keywords" content="Bao Hoang, Career, Software Engineer, Computer Science" />
+    <meta name="author" content="Bao Hoang" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./video.js" defer></script>
 </head>
 
 <body>
-    <video autoplay muted id="myVideo" playsinline>
-        <source type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <script src="video.js"></script>
+
+    <video id="myVideo" autoplay muted playsinline></video>
+    <div class="video-overlay"></div>
 
     <nav>
-        <ul id="navbuttons">
-            <li><a id="buttons" href="./">Home</a></li>
-            <li><a id="buttons" href="./career">Career</a></li>
-            <li><a id="buttons" href="./education">Education</a></li>
-            <li><a id="buttons" href="./background">Background</a></li>
-            <li><a id="buttons" href="./hobbies">Hobbies</a></li>
+        <ul class="navbuttons">
+            <li><a class="buttons" href="./index.html">Home</a></li>
+            <li><a class="buttons active" href="./career.html">Career</a></li>
+            <li><a class="buttons" href="./education.html">Education</a></li>
+            <li><a class="buttons" href="./background.html">Background</a></li>
+            <li><a class="buttons" href="./hobbies.html">Hobbies</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1 style="font-family: 'Times New Roman', Times, serif; margin-top: 20px;">Career</h1>
+        <h1>Career</h1>
+        <p>My software development experience, goals, and professional growth</p>
     </header>
 
-<section>
-    <p>
-        Bao’s career path blends hands-on technical support, software engineering, and project-driven 
-        development. Through a combination of academic learning and professional experience, he has 
-        built a foundation in computer science with a focus on user support and 
-        full-stack development.
-    </p>
+    <main>
+        <section class="content-card">
+            <h2>Career Goal</h2>
+            <p>
+                My goal is to grow as a software engineer by building real-world applications,
+                improving my technical skills, and contributing to projects that solve meaningful problems.
+            </p>
+        </section>
 
-    <h3>IT Services Assistant — Christopher Newport University</h3>
-    <p>
-        At CNU, Bao worked in campus IT Services, where he gained experience managing enterprise user 
-        accounts through Azure Active Directory and LDAP supporting over 1,000 users across the 
-        university. He regularly resolved technical support tickets and provided onsite support 
-        developing strong communication and troubleshooting skills while ensuring compliance with 
-        state security policies. His role also included hardware lifecycle management, system 
-        administration, and working across Windows, Mac, and Linux environments.
-    </p>
+        <section class="content-card">
+            <h2>Experience</h2>
 
-    <h3>Software Engineer Intern — Thomas Jefferson National Accelerator Facility</h3>
-    <p>
-        Bao expanded his technical expertise as a Software Engineer Intern at Jefferson Lab. He 
-        designed and implemented dynamic request forms in ColdFusion to digitize paper-based workflows
-        and optimized SQL queries in Oracle Database to improve data retrieval efficiency. By working 
-        closely with end-users, he contributed iterative improvements that enhanced usability and 
-        reduced errors. His work digitizing physical records and ensuring secure authentication 
-        measures showcased his ability to balance technical development with real-world usability 
-        and data privacy needs.
-    </p>
+            <div class="info-block">
+                <h3>Machine Learning Fellowship</h3>
+                <p>
+                    Worked on software and machine learning workflows involving image capture,
+                    data organization, and model training for ocean floor scanning.
+                </p>
+            </div>
 
-    <h3>Student Housing Assistant — Christopher Newport University</h3>
-    <p>
-        In his role with Student Housing, Bao supported both staff and contractors by ensuring safe 
-        and secure access to student living spaces. He assisted with preventative maintenance and 
-        logistical operations while also digitizing and organizing housing records. His contributions 
-        improved operational efficiency and reinforced the importance of clear coordination between 
-        technical and administrative teams.
-    </p>
+            <div class="info-block">
+                <h3>SULI Software Engineer Intern</h3>
+                <p>
+                    Built and supported a full-stack application using ColdFusion and Oracle SQL.
+                    Focused on authentication, input validation, database performance, and replacing paper-based workflows.
+                </p>
+            </div>
 
-    <h2>Resumes</h2>
-    <p>
-        For a closer look at Bao’s technical and professional background, see his resumes below:
-    </p>
-    <ul id="navbuttons">
-        <li><a id="buttonspro" href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing">Technical Resume</a></li>
-        <li><a id="buttonspro" href="https://docs.google.com/document/d/10G9vkad5AzkEzDfAEyX01y9ZMAV0TIVrYChUAYvdLDM/edit?usp=sharing">General Resume (Outdated)</a></li>
-    </ul>
-</section>
+            <div class="info-block">
+                <h3>IT Services Assistant</h3>
+                <p>
+                    Supported web and IT services, helped troubleshoot technical issues, and gained experience
+                    assisting users in a professional environment.
+                </p>
+            </div>
+        </section>
 
+        <section class="content-card">
+            <h2>Technical Skills</h2>
+
+            <div class="roadmap">
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>React</span>
+                <span>Next.js</span>
+                <span>FastAPI</span>
+                <span>SQL</span>
+                <span>PostgreSQL</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Docker</span>
+                <span>AWS</span>
+                <span>Git</span>
+                <span>Machine Learning</span>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>Career Focus</h2>
+            <p>
+                I am especially interested in full-stack development, backend systems, APIs,
+                databases, cloud deployment, and machine learning applications.
+            </p>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank">
-                <img src="linkedin.jpg" alt="LinkedIn">
+                <img src="./linkedin.jpg" alt="LinkedIn" />
             </a>
+
             <a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing"
                 target="_blank">
-                <img src="RESUME (1).png" alt="Resume">
+                <img src="./resume.png" alt="Resume" />
             </a>
         </div>
+
         <div id="copyright">
             <p>&copy; 2024 Bao Hoang. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 
 </html>
