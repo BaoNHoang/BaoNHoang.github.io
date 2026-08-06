@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Bao Hoang</title>
+    <meta name="description" content="Selected software engineering projects by Bao Hoang across scientific computing, machine learning, local AI, full-stack systems, and product design." />
+    <meta name="author" content="Bao Hoang" />
+    <meta name="theme-color" content="#f4f2ed" />
+    <script>
+        (() => {
+            const saved = localStorage.getItem("portfolio-theme");
+            const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.dataset.theme = saved || (dark ? "dark" : "light");
+        })();
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="./index.html" aria-label="Bao Hoang home"><span class="brand-mark" aria-hidden="true">BH</span><span class="brand-name">Bao Hoang</span></a>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-links">
+                    <li><a class="nav-link" data-nav-link href="./index.html">Home</a></li>
+                    <li><a class="nav-link" data-nav-link href="./career.html">Experience</a></li>
+                    <li><a class="nav-link" data-nav-link href="./projects.html">Projects</a></li>
+                    <li><a class="nav-link" data-nav-link href="./education.html">Education</a></li>
+                    <li><a class="nav-link" data-nav-link href="./background.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-button" type="button" data-theme-toggle aria-label="Use dark theme" aria-pressed="false">
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.4 8.4 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+                </button>
+                <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-panel" id="mobile-menu" data-mobile-panel aria-label="Mobile navigation">
+        <ul class="mobile-links">
+            <li><a data-nav-link href="./index.html">Home <span aria-hidden="true">01</span></a></li>
+            <li><a data-nav-link href="./career.html">Experience <span aria-hidden="true">02</span></a></li>
+            <li><a data-nav-link href="./projects.html">Projects <span aria-hidden="true">03</span></a></li>
+            <li><a data-nav-link href="./education.html">Education <span aria-hidden="true">04</span></a></li>
+            <li><a data-nav-link href="./background.html">About <span aria-hidden="true">05</span></a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container" data-reveal>
+                <p class="eyebrow">Selected projects</p>
+                <h1>Systems that turn <span>data, models, and APIs</span> into useful products.</h1>
+                <p class="hero-lede">These projects show how I approach architecture, domain constraints, privacy, reliability, and user experience—not only the final interface.</p>
+                <p class="page-index">02 / Project portfolio</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="filters" aria-label="Filter projects" data-reveal>
+                    <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All work</button>
+                    <button class="filter-button" type="button" data-filter="data" aria-pressed="false">Scientific data</button>
+                    <button class="filter-button" type="button" data-filter="fullstack" aria-pressed="false">Full-stack</button>
+                    <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI systems</button>
+                    <button class="filter-button" type="button" data-filter="design" aria-pressed="false">Web + product</button>
+                </div>
+
+                <div class="project-list">
+                    <article class="project-card project-card-wide" id="ceres-toolkit" data-category="data" data-reveal>
+                        <div>
+                            <p class="project-number">01 · NASA CERES</p>
+                            <p class="card-kicker">Scientific data engineering</p>
+                            <h2>Radiance processing and NetCDF toolkit</h2>
+                            <p>Developed a modular scientific workflow that reconstructs hyperspectral radiances, applies spectral response functions, reorganizes data into scene-based shards, and exposes reusable inspection, validation, and visualization tools for researchers.</p>
+                            <ul class="impact-list">
+                                <li>Processes workflows totaling roughly 0.5 TB and millions of radiance and spectrum values.</li>
+                                <li>Uses sharding and caching to reduce processing time by about half.</li>
+                                <li>Supports polar plots, histograms, field-of-view auditing, data-grid validation, and narrowband-to-broadband product generation.</li>
+                            </ul>
+                            <ul class="tag-list"><li>Python</li><li>NetCDF4</li><li>Xarray</li><li>NumPy</li><li>Scientific architecture</li></ul>
+                        </div>
+                        <div class="project-diagram" aria-label="CERES workflow diagram">
+                            <div class="diagram-node"><code>INPUT</code><span>Principal-component coefficients + geometry</span></div>
+                            <div class="diagram-arrow" aria-hidden="true"></div>
+                            <div class="diagram-node"><code>PROCESS</code><span>Radiance reconstruction + SRF application</span></div>
+                            <div class="diagram-arrow" aria-hidden="true"></div>
+                            <div class="diagram-node"><code>STORE</code><span>Scene-organized NetCDF shards</span></div>
+                            <div class="diagram-arrow" aria-hidden="true"></div>
+                            <div class="diagram-node"><code>OUTPUT</code><span>Validated products, plots, and analysis</span></div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="data fullstack design" data-reveal>
+                        <p class="project-number">02 · IN DEVELOPMENT</p>
+                        <p class="card-kicker">Scientific web application</p>
+                        <h2>CERES comparison tool</h2>
+                        <p>An internal application for comparing Earth-science visualizations side by side, calculating differences, and supporting ordering workflows around radiance-budget and cloud-property datasets.</p>
+                        <ul class="impact-list"><li>Next.js frontend with a Python API boundary.</li><li>NetCDF-aware data services and comparison workflows.</li><li>Designed for user tracking, maintainability, security, and future scale.</li></ul>
+                        <ul class="tag-list"><li>Next.js</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>NetCDF</li></ul>
+                    </article>
+
+                    <article class="project-card" data-category="fullstack ai" data-reveal>
+                        <p class="project-number">03 · CAPSTONE</p>
+                        <p class="card-kicker">Full-stack machine learning</p>
+                        <h2>MedPredict</h2>
+                        <p>A containerized educational health-risk prediction platform with account workflows, prediction history, model inference, and a modern web interface. It is explicitly presented as a demonstration project rather than medical advice.</p>
+                        <ul class="impact-list"><li>Next.js and React frontend with FastAPI backend.</li><li>PostgreSQL persistence and scikit-learn model pipeline.</li><li>Dockerized deployment on AWS EC2.</li></ul>
+                        <ul class="tag-list"><li>Next.js</li><li>FastAPI</li><li>PostgreSQL</li><li>scikit-learn</li><li>Docker</li></ul>
+                        <a class="card-link" href="https://github.com/BaoNHoang/MedPredict" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+
+                    <article class="project-card" data-category="ai fullstack" data-reveal>
+                        <p class="project-number">04 · LOCAL-FIRST</p>
+                        <p class="card-kicker">Personal AI architecture</p>
+                        <h2>Orion</h2>
+                        <p>A private personal assistant for Windows and the web that combines local Ollama inference, persistent conversations, consent-based memory, live voice interaction, selective research, and configurable workspaces.</p>
+                        <ul class="impact-list"><li>Keeps personal conversation data in a local SQLite database excluded from Git.</li><li>Separates model integration, persistence, memory, and interaction concerns.</li><li>Uses a reviewed main/develop branch workflow and explicit quality checks.</li></ul>
+                        <ul class="tag-list"><li>Node.js</li><li>Ollama</li><li>SQLite</li><li>Voice</li><li>Privacy</li></ul>
+                        <a class="card-link" href="https://github.com/BaoNHoang/Orion" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+
+                    <article class="project-card" data-category="fullstack ai" data-reveal>
+                        <p class="project-number">05 · PWA + MCP</p>
+                        <p class="card-kicker">Consumer application architecture</p>
+                        <h2>Banime</h2>
+                        <p>A mobile-ready anime tracker, discovery app, and news hub with local-first storage, optional Supabase synchronization, installable PWA behavior, external API caching, and an MCP server for ChatGPT integration.</p>
+                        <ul class="impact-list"><li>Offline-first tracking with optional cross-device synchronization.</li><li>Supabase Auth with HttpOnly cookies and row-level security.</li><li>Rate-limited MCP tools for search, news, library updates, and recommendations.</li></ul>
+                        <ul class="tag-list"><li>TypeScript</li><li>Supabase</li><li>PWA</li><li>MCP</li><li>Redis</li></ul>
+                        <a class="card-link" href="https://github.com/BaoNHoang/Anime_Track" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                    </article>
+
+                    <article class="project-card" data-category="design" data-reveal>
+                        <p class="project-number">06 · NASA PUBLIC WEB</p>
+                        <p class="card-kicker">Information architecture + UI design</p>
+                        <h2>DEMETER mission pages</h2>
+                        <p>Designed and developed public CERES web pages with Jeet Patel for the upcoming DEMETER instrument, organizing technical information into a clearer mission overview and FAQ experience.</p>
+                        <ul class="impact-list"><li>Translated scientific and instrument information for a public audience.</li><li>Created a consistent visual hierarchy for mission, instrument, and FAQ content.</li><li>Implemented within the existing NASA CERES WordPress environment.</li></ul>
+                        <ul class="tag-list"><li>WordPress</li><li>UI/UX</li><li>Content design</li><li>Accessibility</li></ul>
+                        <a class="card-link" href="https://ceres.larc.nasa.gov/instruments/demeter/" target="_blank" rel="noopener noreferrer">View live page <span aria-hidden="true">↗</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-rule">
+            <div class="container split">
+                <div class="sticky-copy" data-reveal>
+                    <p class="eyebrow">How I work</p>
+                    <h2 class="content-title">Architecture before decoration.</h2>
+                    <p class="content-intro">I start by defining data ownership, system boundaries, failure behavior, and the user workflow. The interface then makes those decisions understandable.</p>
+                </div>
+                <div class="timeline" data-reveal>
+                    <article class="timeline-item"><p class="timeline-date">01 / MODEL</p><div><h3>Clarify the domain</h3><p>Identify the real entities, constraints, scientific assumptions, users, and decisions the system must support.</p></div></article>
+                    <article class="timeline-item"><p class="timeline-date">02 / BOUNDARIES</p><div><h3>Separate responsibilities</h3><p>Keep storage, APIs, processing, model access, and presentation isolated enough to test and evolve independently.</p></div></article>
+                    <article class="timeline-item"><p class="timeline-date">03 / FAILURE</p><div><h3>Design for what goes wrong</h3><p>Use explicit validation, timeouts, error states, privacy boundaries, and recoverable workflows instead of assuming the happy path.</p></div></article>
+                    <article class="timeline-item"><p class="timeline-date">04 / EXPERIENCE</p><div><h3>Make complexity legible</h3><p>Use clear information hierarchy, progressive disclosure, and accessible interaction so technical power does not become UI clutter.</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-compact">
+            <div class="container">
+                <div class="contact-band" data-reveal>
+                    <div><h2>Interested in the engineering behind one of these projects?</h2><p>I can discuss architecture decisions, trade-offs, implementation details, and what I would improve in the next iteration.</p></div>
+                    <a class="button" href="mailto:Bao.n.hoang03@gmail.com">Contact me <span class="button-arrow" aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p class="footer-copy">© <span data-current-year>2026</span> Bao Hoang. Built with HTML, CSS, and JavaScript.</p>
+            <nav class="footer-links" aria-label="Footer navigation"><a href="https://github.com/BaoNHoang" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a><a href="./hobbies.html">Outside work</a></nav>
+        </div>
+    </footer>
+</body>
+</html>
