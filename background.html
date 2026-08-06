@@ -3,130 +3,47 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Bao Hoang</title>
-    <meta name="description" content="Learn about Bao Hoang's background, engineering perspective, and journey from Da Lat, Vietnam to software engineering and scientific computing in Virginia." />
-    <meta name="author" content="Bao Hoang" />
-    <meta name="theme-color" content="#f4f2ed" />
-    <script>
-        (() => {
-            const saved = localStorage.getItem("portfolio-theme");
-            const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            document.documentElement.dataset.theme = saved || (dark ? "dark" : "light");
-        })();
-    </script>
+    <title>Background | Bao Hoang</title>
+    <meta name="description" content="Personal background of Bao Hoang." />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
+    <script src="./video.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <video id="backgroundVideo" autoplay muted playsinline aria-hidden="true"></video>
+    <div class="video-overlay" aria-hidden="true"></div>
 
-    <header class="site-header">
-        <div class="container nav-shell">
-            <a class="brand" href="./index.html" aria-label="Bao Hoang home"><span class="brand-mark" aria-hidden="true">BH</span><span class="brand-name">Bao Hoang</span></a>
-            <nav aria-label="Primary navigation">
-                <ul class="nav-links">
-                    <li><a class="nav-link" data-nav-link href="./index.html">Home</a></li>
-                    <li><a class="nav-link" data-nav-link href="./career.html">Experience</a></li>
-                    <li><a class="nav-link" data-nav-link href="./projects.html">Projects</a></li>
-                    <li><a class="nav-link" data-nav-link href="./education.html">Education</a></li>
-                    <li><a class="nav-link" data-nav-link href="./background.html">About</a></li>
-                </ul>
-            </nav>
-            <div class="nav-actions">
-                <button class="icon-button" type="button" data-theme-toggle aria-label="Use dark theme" aria-pressed="false">
-                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
-                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.4 8.4 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
-                </button>
-                <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span></button>
-            </div>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a class="logo" href="./index.html">BH</a>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./career.html">Career</a>
+            <a href="./education.html">Education</a>
+            <a class="active" href="./background.html">Background</a>
+            <a href="./hobbies.html">Hobbies</a>
         </div>
-    </header>
-
-    <nav class="mobile-panel" id="mobile-menu" data-mobile-panel aria-label="Mobile navigation">
-        <ul class="mobile-links">
-            <li><a data-nav-link href="./index.html">Home <span aria-hidden="true">01</span></a></li>
-            <li><a data-nav-link href="./career.html">Experience <span aria-hidden="true">02</span></a></li>
-            <li><a data-nav-link href="./projects.html">Projects <span aria-hidden="true">03</span></a></li>
-            <li><a data-nav-link href="./education.html">Education <span aria-hidden="true">04</span></a></li>
-            <li><a data-nav-link href="./background.html">About <span aria-hidden="true">05</span></a></li>
-        </ul>
     </nav>
 
-    <main id="main-content">
-        <section class="page-hero">
-            <div class="container" data-reveal>
-                <p class="eyebrow">About</p>
-                <h1>Adaptability shaped my background. <span>Curiosity shapes my engineering.</span></h1>
-                <p class="hero-lede">I was born in Da Lat, Vietnam and moved to the United States during elementary school. Learning to adapt across languages, schools, and environments became part of how I approach difficult technical problems today.</p>
-                <p class="page-index">04 / Background and perspective</p>
-            </div>
-        </section>
+    <main class="page">
+        <section class="panel">
+            <p class="eyebrow">About Me</p>
+            <h1 class="page-title">Background</h1>
+            <p class="subtitle">Born in Da Lat, Vietnam. Raised in Virginia.</p>
 
-        <section class="section">
-            <div class="container origin-layout">
-                <div class="origin-mark" data-reveal aria-label="Journey from Da Lat, Vietnam to Virginia, United States">
-                    <div class="origin-line">
-                        <div class="origin-labels"><span>Da Lat, Vietnam</span><span>Virginia, USA</span></div>
-                    </div>
-                </div>
-                <div class="prose" data-reveal>
-                    <p class="eyebrow">My journey</p>
-                    <h2>Two cultures, one habit of continuous learning.</h2>
-                    <p>I grew up bilingual in English and Vietnamese after moving from Vietnam to the United States. That transition required patience, observation, and a willingness to keep learning even when the context was unfamiliar.</p>
-                    <p>Those same habits now show up in my work. Scientific software requires learning the science behind the data. Full-stack engineering requires understanding how product, security, databases, APIs, and users affect one another. System design requires being comfortable with incomplete information and making trade-offs explicit.</p>
-                    <p>I am most engaged when a project has a meaningful domain behind it—Earth science, research workflows, machine learning, or a product that helps people organize complex information.</p>
-                    <blockquote class="quote">“Learning never stops in the classroom. You have to go beyond it, absorb what the work demands, and build your own path forward.”</blockquote>
-                </div>
-            </div>
-        </section>
+            <p class="summary">
+                Moving to the United States at a young age taught me how to adapt, keep learning, and become comfortable in unfamiliar environments. I am bilingual in English and Vietnamese.
+            </p>
 
-        <section class="section section-rule">
-            <div class="container">
-                <div class="section-heading" data-reveal>
-                    <div><p class="eyebrow">Engineering principles</p><h2>How I want my work to be judged.</h2></div>
-                    <p>The best implementation is not the one with the most technology. It is the one that makes the system safer, clearer, and easier to evolve.</p>
-                </div>
-                <div class="education-grid">
-                    <article class="education-card" data-reveal><p class="card-kicker">01</p><h2>Understand the domain</h2><p>Before changing code, learn what the data means, who uses it, and which assumptions cannot be violated.</p></article>
-                    <article class="education-card" data-reveal><p class="card-kicker">02</p><h2>Make boundaries explicit</h2><p>Separate data processing, business rules, persistence, infrastructure, and presentation so each layer has a clear responsibility.</p></article>
-                    <article class="education-card" data-reveal><p class="card-kicker">03</p><h2>Design for failure</h2><p>Use validation, timeouts, retries, privacy controls, useful errors, and observability instead of relying on ideal conditions.</p></article>
-                    <article class="education-card" data-reveal><p class="card-kicker">04</p><h2>Reduce repeated work</h2><p>Turn one-off scripts and manual steps into reusable tools, documented workflows, and components other people can trust.</p></article>
-                    <article class="education-card" data-reveal><p class="card-kicker">05</p><h2>Communicate clearly</h2><p>Architecture only creates value when scientists, engineers, stakeholders, and users can understand the decisions behind it.</p></article>
-                    <article class="education-card" data-reveal><p class="card-kicker">06</p><h2>Keep improving</h2><p>Review assumptions, measure outcomes, accept corrections, and treat every project as a chance to improve the next one.</p></article>
-                </div>
-            </div>
-        </section>
+            <p class="summary">
+                I became interested in software because it combines creativity with problem solving. I like taking complicated ideas and turning them into tools that are easier to understand and use.
+            </p>
 
-        <section class="section section-rule">
-            <div class="container split">
-                <div class="sticky-copy" data-reveal>
-                    <p class="eyebrow">What I am building toward</p>
-                    <h2 class="content-title">A career connecting research and production engineering.</h2>
-                    <p class="content-intro">I want to remain technically hands-on while growing into larger architecture and system responsibilities.</p>
-                </div>
-                <div class="timeline" data-reveal>
-                    <article class="timeline-item"><p class="timeline-date">NOW</p><div><h3>Scientific software</h3><p>Build reliable processing, validation, and visualization tools for complex Earth-science data.</p></div></article>
-                    <article class="timeline-item"><p class="timeline-date">NEXT</p><div><h3>Production systems</h3><p>Design larger applications with secure APIs, durable storage, caching, queues, observability, and maintainable frontend workflows.</p></div></article>
-                    <article class="timeline-item"><p class="timeline-date">LONG TERM</p><div><h3>Technical leadership</h3><p>Guide architecture while staying close enough to implementation to understand the trade-offs and support the engineers doing the work.</p></div></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-compact">
-            <div class="container">
-                <div class="contact-band" data-reveal>
-                    <div><h2>Good engineering starts with understanding the problem and the people living with it.</h2><p>That is the standard I bring to research software, product development, and technical collaboration.</p></div>
-                    <a class="button" href="./hobbies.html">Outside of work <span class="button-arrow" aria-hidden="true">→</span></a>
-                </div>
+            <div class="actions compact-actions">
+                <a href="./career.html">Career</a>
+                <a href="./hobbies.html">Outside work</a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <p class="footer-copy">© <span data-current-year>2026</span> Bao Hoang. Built with HTML, CSS, and JavaScript.</p>
-            <nav class="footer-links" aria-label="Footer navigation"><a href="https://github.com/BaoNHoang" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a><a href="./hobbies.html">Outside work</a></nav>
-        </div>
-    </footer>
+    <footer><p>&copy; 2026 Bao Hoang</p></footer>
 </body>
 </html>
