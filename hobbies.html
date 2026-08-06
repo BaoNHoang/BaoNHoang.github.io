@@ -1,117 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Hobbies - Bao Hoang</title>
-
-    <meta name="description" content="Hobbies page for Bao Hoang." />
-    <meta name="keywords" content="Bao Hoang, Hobbies, Portfolio, Computer Science" />
+    <title>Outside Work | Bao Hoang</title>
+    <meta name="description" content="Bao Hoang's interests outside professional software engineering, including gaming, fitness, emerging technology, and independent learning." />
     <meta name="author" content="Bao Hoang" />
-
+    <meta name="theme-color" content="#f4f2ed" />
+    <script>
+        (() => {
+            const saved = localStorage.getItem("portfolio-theme");
+            const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.dataset.theme = saved || (dark ? "dark" : "light");
+        })();
+    </script>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./video.js" defer></script>
+    <script src="./script.js" defer></script>
 </head>
-
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <video id="myVideo" autoplay muted playsinline></video>
-    <div class="video-overlay"></div>
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="./index.html" aria-label="Bao Hoang home"><span class="brand-mark" aria-hidden="true">BH</span><span class="brand-name">Bao Hoang</span></a>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-links">
+                    <li><a class="nav-link" data-nav-link href="./index.html">Home</a></li>
+                    <li><a class="nav-link" data-nav-link href="./career.html">Experience</a></li>
+                    <li><a class="nav-link" data-nav-link href="./projects.html">Projects</a></li>
+                    <li><a class="nav-link" data-nav-link href="./education.html">Education</a></li>
+                    <li><a class="nav-link" data-nav-link href="./background.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-button" type="button" data-theme-toggle aria-label="Use dark theme" aria-pressed="false">
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.4 8.4 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+                </button>
+                <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span></button>
+            </div>
+        </div>
+    </header>
 
-    <nav>
-        <ul class="navbuttons">
-            <li><a class="buttons" href="./index.html">Home</a></li>
-            <li><a class="buttons" href="./career.html">Career</a></li>
-            <li><a class="buttons" href="./education.html">Education</a></li>
-            <li><a class="buttons" href="./background.html">Background</a></li>
-            <li><a class="buttons active" href="./hobbies.html">Hobbies</a></li>
+    <nav class="mobile-panel" id="mobile-menu" data-mobile-panel aria-label="Mobile navigation">
+        <ul class="mobile-links">
+            <li><a data-nav-link href="./index.html">Home <span aria-hidden="true">01</span></a></li>
+            <li><a data-nav-link href="./career.html">Experience <span aria-hidden="true">02</span></a></li>
+            <li><a data-nav-link href="./projects.html">Projects <span aria-hidden="true">03</span></a></li>
+            <li><a data-nav-link href="./education.html">Education <span aria-hidden="true">04</span></a></li>
+            <li><a data-nav-link href="./background.html">About <span aria-hidden="true">05</span></a></li>
         </ul>
     </nav>
 
-    <header>
-        <h1>Hobbies</h1>
-        <p>Things I enjoy outside of academics, coding, and career development</p>
-    </header>
-
-    <main>
-        <section class="content-card">
-            <h2>Outside of Computer Science</h2>
-
-            <p>
-                Outside of school and software development, I enjoy activities that help me stay creative,
-                disciplined, and motivated. My hobbies give me a balance between problem solving, personal
-                growth, and relaxing from academic work.
-            </p>
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container" data-reveal>
+                <p class="eyebrow">Outside work</p>
+                <h1>Curiosity does not stop when <span>the workday ends.</span></h1>
+                <p class="hero-lede">My interests outside formal work still revolve around learning, building, strategy, and staying disciplined—but without turning every activity into another résumé bullet.</p>
+                <p class="page-index">05 / Interests and personal balance</p>
+            </div>
         </section>
 
-        <section class="content-card">
-            <h2>Interests</h2>
-
-            <ul class="future-projects">
-                <li>
-                    <strong>Technology</strong>
-                    <span>
-                        I enjoy exploring new software tools, programming ideas, and technology trends.
-                        I like learning how different systems work and finding ways to apply them to my own projects.
-                    </span>
-                </li>
-
-                <li>
-                    <strong>Gaming</strong>
-                    <span>
-                        I like games that involve strategy, creativity, and problem solving. Gaming also inspires
-                        some of the projects I have built, such as small browser games and arcade-style programs.
-                    </span>
-                </li>
-
-                <li>
-                    <strong>Fitness and Personal Growth</strong>
-                    <span>
-                        I value staying active, building discipline, and improving myself over time. Fitness helps
-                        me stay focused and balanced while working toward my academic and career goals.
-                    </span>
-                </li>
-
-                <li>
-                    <strong>Creative Projects</strong>
-                    <span>
-                        I enjoy building things, experimenting with design, and turning ideas into finished projects.
-                        Whether it is a website, game, or app, I like seeing an idea become something real.
-                    </span>
-                </li>
-            </ul>
+        <section class="section">
+            <div class="container">
+                <div class="interest-grid">
+                    <article class="interest-card" data-reveal>
+                        <p class="card-kicker">Strategy + systems</p>
+                        <h2>Gaming</h2>
+                        <p>I enjoy games with progression, optimization, exploration, and systems that reward understanding how mechanics interact. It is a different context for the same kind of structured problem solving I enjoy in software.</p>
+                    </article>
+                    <article class="interest-card" data-reveal>
+                        <p class="card-kicker">Consistency</p>
+                        <h2>Fitness</h2>
+                        <p>Training provides a direct practice in discipline: progress is gradual, consistency matters more than intensity on one day, and the plan must adapt when recovery or circumstances change.</p>
+                    </article>
+                    <article class="interest-card" data-reveal>
+                        <p class="card-kicker">Independent study</p>
+                        <h2>Emerging technology</h2>
+                        <p>I spend time studying system design, local AI, distributed infrastructure, and quantum computing—not only what the technology can do, but the mathematics, architecture, and limitations underneath it.</p>
+                    </article>
+                    <article class="interest-card" data-reveal>
+                        <p class="card-kicker">Build to understand</p>
+                        <h2>Personal projects</h2>
+                        <p>Small applications are how I test ideas that are too abstract in notes alone. Building exposes missing requirements, hidden coupling, security assumptions, and the difference between a demo and a dependable system.</p>
+                    </article>
+                    <article class="interest-card" data-reveal>
+                        <p class="card-kicker">Science + perspective</p>
+                        <h2>Earth and space</h2>
+                        <p>Working with satellite data has made me more interested in how instruments observe Earth, how measurements become climate products, and how software helps scientists reason about systems larger than any one dataset.</p>
+                    </article>
+                    <article class="interest-card" data-reveal>
+                        <p class="card-kicker">Creative structure</p>
+                        <h2>Design</h2>
+                        <p>I enjoy turning dense information into interfaces that feel deliberate and easy to scan. Good design is not decoration; it is the organization of attention, decisions, and context.</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section class="content-card">
-            <h2>Why These Matter</h2>
+        <section class="section section-rule">
+            <div class="container origin-layout">
+                <div class="prose" data-reveal>
+                    <p class="eyebrow">Balance</p>
+                    <h2>Different activities develop different kinds of patience.</h2>
+                    <p>Software can create the illusion that every problem should resolve immediately. Fitness, games, long-form study, and creative projects reinforce the opposite lesson: improvement often comes from repeating fundamentals, recognizing patterns, and letting understanding accumulate.</p>
+                    <p>That balance makes me more effective when I return to technical work. I can step away from a stubborn implementation, revisit the system model, and separate the actual problem from the first solution I became attached to.</p>
+                </div>
+                <div class="timeline" data-reveal>
+                    <article class="timeline-item"><p class="timeline-date">LEARN</p><div><h3>Read beyond the surface</h3><p>Trace unfamiliar concepts back to their assumptions, definitions, and implementation details.</p></div></article>
+                    <article class="timeline-item"><p class="timeline-date">PRACTICE</p><div><h3>Repeat the fundamentals</h3><p>Use consistent training and focused exercises instead of relying on occasional bursts of motivation.</p></div></article>
+                    <article class="timeline-item"><p class="timeline-date">BUILD</p><div><h3>Create something concrete</h3><p>Turn an idea into a working project, then observe where the initial design fails.</p></div></article>
+                    <article class="timeline-item"><p class="timeline-date">RESET</p><div><h3>Make room for perspective</h3><p>Step away, recover, and return with enough distance to challenge the previous approach.</p></div></article>
+                </div>
+            </div>
+        </section>
 
-            <p>
-                These hobbies help me become a better problem solver and developer. Technology keeps me curious,
-                gaming strengthens my creativity and logic, fitness builds discipline, and creative projects help me
-                practice turning ideas into real results.
-            </p>
+        <section class="section-compact">
+            <div class="container">
+                <div class="contact-band" data-reveal>
+                    <div><h2>The common thread is simple: understand how things work, then make them better.</h2><p>That applies to code, systems, training, games, and the way complex information is presented.</p></div>
+                    <a class="button" href="./background.html">Back to about <span class="button-arrow" aria-hidden="true">→</span></a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank">
-                <img src="./linkedin.jpg" alt="LinkedIn" />
-            </a>
-
-            <a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing"
-                target="_blank">
-                <img src="./resume.png" alt="Resume" />
-            </a>
-        </div>
-
-        <div id="copyright">
-            <p>&copy; 2024 Bao Hoang. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p class="footer-copy">© <span data-current-year>2026</span> Bao Hoang. Built with HTML, CSS, and JavaScript.</p>
+            <nav class="footer-links" aria-label="Footer navigation"><a href="https://github.com/BaoNHoang" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a><a href="./index.html">Home</a></nav>
         </div>
     </footer>
-
 </body>
-
 </html>
