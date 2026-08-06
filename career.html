@@ -3,189 +3,65 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experience | Bao Hoang</title>
-    <meta name="description" content="Bao Hoang's software engineering experience across NASA Langley, Rhovah, Jefferson Lab, and Christopher Newport University IT Services." />
-    <meta name="author" content="Bao Hoang" />
-    <meta name="theme-color" content="#f4f2ed" />
-    <script>
-        (() => {
-            const saved = localStorage.getItem("portfolio-theme");
-            const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            document.documentElement.dataset.theme = saved || (dark ? "dark" : "light");
-        })();
-    </script>
+    <title>Career | Bao Hoang</title>
+    <meta name="description" content="Career experience of software engineer Bao Hoang." />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
+    <script src="./video.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <video id="backgroundVideo" autoplay muted playsinline aria-hidden="true"></video>
+    <div class="video-overlay" aria-hidden="true"></div>
 
-    <header class="site-header">
-        <div class="container nav-shell">
-            <a class="brand" href="./index.html" aria-label="Bao Hoang home"><span class="brand-mark" aria-hidden="true">BH</span><span class="brand-name">Bao Hoang</span></a>
-            <nav aria-label="Primary navigation">
-                <ul class="nav-links">
-                    <li><a class="nav-link" data-nav-link href="./index.html">Home</a></li>
-                    <li><a class="nav-link" data-nav-link href="./career.html">Experience</a></li>
-                    <li><a class="nav-link" data-nav-link href="./projects.html">Projects</a></li>
-                    <li><a class="nav-link" data-nav-link href="./education.html">Education</a></li>
-                    <li><a class="nav-link" data-nav-link href="./background.html">About</a></li>
-                </ul>
-            </nav>
-            <div class="nav-actions">
-                <button class="icon-button" type="button" data-theme-toggle aria-label="Use dark theme" aria-pressed="false">
-                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
-                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.4 8.4 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
-                </button>
-                <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span></button>
-            </div>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a class="logo" href="./index.html">BH</a>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a class="active" href="./career.html">Career</a>
+            <a href="./education.html">Education</a>
+            <a href="./background.html">Background</a>
+            <a href="./hobbies.html">Hobbies</a>
         </div>
-    </header>
-
-    <nav class="mobile-panel" id="mobile-menu" data-mobile-panel aria-label="Mobile navigation">
-        <ul class="mobile-links">
-            <li><a data-nav-link href="./index.html">Home <span aria-hidden="true">01</span></a></li>
-            <li><a data-nav-link href="./career.html">Experience <span aria-hidden="true">02</span></a></li>
-            <li><a data-nav-link href="./projects.html">Projects <span aria-hidden="true">03</span></a></li>
-            <li><a data-nav-link href="./education.html">Education <span aria-hidden="true">04</span></a></li>
-            <li><a data-nav-link href="./background.html">About <span aria-hidden="true">05</span></a></li>
-        </ul>
     </nav>
 
-    <main id="main-content">
-        <section class="page-hero">
-            <div class="container" data-reveal>
-                <p class="eyebrow">Experience</p>
-                <h1>Software built for <span>science, products, and operations.</span></h1>
-                <p class="hero-lede">My work spans scientific data pipelines, full-stack product development, internal enterprise applications, and user-facing technical operations.</p>
-                <p class="page-index">01 / Professional experience</p>
-            </div>
-        </section>
+    <main class="page">
+        <section class="panel">
+            <p class="eyebrow">Experience</p>
+            <h1 class="page-title">Career</h1>
+            <p class="subtitle">I enjoy building useful software and improving complicated technical workflows.</p>
 
-        <section class="section">
-            <div class="container experience-list">
-                <article class="experience-item" data-reveal>
-                    <div>
-                        <p class="role-period">JUN 2026 — PRESENT</p>
-                        <p class="role-location">HAMPTON, VA</p>
+            <div class="simple-list">
+                <article>
+                    <div class="item-heading">
+                        <h2>NASA Langley</h2>
+                        <span>2026–Present</span>
                     </div>
-                    <div>
-                        <div class="role-heading">
-                            <div><h2>Software Engineer Intern — OSTEM</h2><p class="role-company">NASA Langley Research Center · CERES</p></div>
-                        </div>
-                        <p class="role-summary">Developing scientific software for the Clouds and the Earth's Radiant Energy System mission, with emphasis on maintainable data architecture, radiance processing, validation, and visualization.</p>
-                        <ul class="impact-list">
-                            <li>Architected modular Python workflows that reconstruct 630-channel hyperspectral radiances from principal-component coefficients and apply instrument spectral response functions.</li>
-                            <li>Reorganized multi-stage processing around scene-based NetCDF shards and caching, cutting processing time by approximately 50% across workflows handling about 0.5 TB of data and millions of radiance and spectrum values.</li>
-                            <li>Built reusable command-line and graphical tools for header inspection, sample and field-of-view audits, validation, polar plots, histograms, and scientific product generation on remote systems.</li>
-                            <li>Contributed architecture and product planning for an internal comparison and ordering application that will place radiance-budget and cloud-property visualizations side by side for direct analysis.</li>
-                            <li>Returning for a second internship term in Fall 2026 to continue the scientific tooling and web-application work.</li>
-                        </ul>
-                        <ul class="tag-list"><li>Python</li><li>NetCDF</li><li>Xarray</li><li>NumPy</li><li>Scientific computing</li><li>System design</li></ul>
-                    </div>
+                    <p>Building Python tools for CERES satellite data processing, visualization, validation, and scientific analysis.</p>
                 </article>
 
-                <article class="experience-item" data-reveal>
-                    <div>
-                        <p class="role-period">JUN — JUL 2026</p>
-                        <p class="role-location">NEWPORT NEWS, VA</p>
+                <article>
+                    <div class="item-heading">
+                        <h2>Rhovah</h2>
+                        <span>2026</span>
                     </div>
-                    <div>
-                        <div class="role-heading"><div><h2>Software Engineer Intern</h2><p class="role-company">Rhovah</p></div></div>
-                        <p class="role-summary">Contributed to a full-stack product with a Django backend and Next.js frontend, working across authentication, APIs, database-backed features, and responsive interface implementation.</p>
-                        <ul class="impact-list">
-                            <li>Implemented login and authenticated application flows using Django, Django REST Framework, and session-based security.</li>
-                            <li>Built and integrated REST endpoints, PostgreSQL-backed data access, and frontend requests through a shared Axios client.</li>
-                            <li>Developed responsive React and Next.js interfaces and integrated S3 and Vimeo-backed media workflows.</li>
-                        </ul>
-                        <ul class="tag-list"><li>Django</li><li>Next.js</li><li>React</li><li>PostgreSQL</li><li>S3</li><li>REST APIs</li></ul>
-                    </div>
+                    <p>Worked on a full-stack application using Django, Next.js, PostgreSQL, authentication, and external APIs.</p>
                 </article>
 
-                <article class="experience-item" data-reveal>
-                    <div>
-                        <p class="role-period">JUL 2025 — PRESENT</p>
-                        <p class="role-location">NEWPORT NEWS, VA</p>
+                <article>
+                    <div class="item-heading">
+                        <h2>Jefferson Lab</h2>
+                        <span>2024–2025</span>
                     </div>
-                    <div>
-                        <div class="role-heading"><div><h2>IT Services Assistant</h2><p class="role-company">Christopher Newport University</p></div></div>
-                        <p class="role-summary">Supporting campus users and systems across identity management, endpoint troubleshooting, software deployment, and day-to-day technical operations.</p>
-                        <ul class="impact-list">
-                            <li>Support an environment serving more than 5,000 users across Windows, macOS, Linux, Azure Active Directory, LDAP, and university systems.</li>
-                            <li>Resolve roughly 50 or more weekly incidents involving accounts, access, devices, applications, networking, and classroom technology.</li>
-                            <li>Use PowerShell and deployment tooling to standardize repeatable support and configuration tasks while following institutional security requirements.</li>
-                        </ul>
-                        <ul class="tag-list"><li>PowerShell</li><li>Azure AD</li><li>LDAP</li><li>Windows</li><li>Linux</li><li>Technical operations</li></ul>
-                    </div>
-                </article>
-
-                <article class="experience-item" data-reveal>
-                    <div>
-                        <p class="role-period">SEP 2024 — JAN 2025</p>
-                        <p class="role-location">NEWPORT NEWS, VA</p>
-                    </div>
-                    <div>
-                        <div class="role-heading"><div><h2>SULI Software Engineer Intern</h2><p class="role-company">Thomas Jefferson National Accelerator Facility</p></div></div>
-                        <p class="role-summary">Built and improved an internal request-management application that moved paper-driven workflows into a secure database-backed system.</p>
-                        <ul class="impact-list">
-                            <li>Developed dynamic request forms and application logic in ColdFusion with Oracle SQL persistence.</li>
-                            <li>Improved authentication, input validation, and query behavior for safer and more reliable internal workflows.</li>
-                            <li>Helped digitize processes that previously depended on manual forms and fragmented status tracking.</li>
-                        </ul>
-                        <ul class="tag-list"><li>ColdFusion</li><li>Oracle SQL</li><li>Authentication</li><li>Input validation</li><li>Workflow automation</li></ul>
-                    </div>
-                </article>
-
-                <article class="experience-item" data-reveal>
-                    <div>
-                        <p class="role-period">AUG 2023 — AUG 2024</p>
-                        <p class="role-location">NEWPORT NEWS, VA</p>
-                    </div>
-                    <div>
-                        <div class="role-heading"><div><h2>IT Services Assistant</h2><p class="role-company">Christopher Newport University</p></div></div>
-                        <p class="role-summary">Built the operational foundation that later informed my approach to reliability, user support, access control, and maintainable technical systems.</p>
-                        <ul class="impact-list">
-                            <li>Supported user accounts, endpoints, and campus applications in a mixed-device environment.</li>
-                            <li>Documented fixes, escalated infrastructure issues, and translated technical problems into clear guidance for end users.</li>
-                        </ul>
-                        <ul class="tag-list"><li>Help desk</li><li>Identity management</li><li>Endpoint support</li><li>Documentation</li></ul>
-                    </div>
+                    <p>Developed internal web tools with ColdFusion and Oracle SQL to improve digital request workflows.</p>
                 </article>
             </div>
-        </section>
 
-        <section class="section section-rule">
-            <div class="container">
-                <div class="section-heading" data-reveal>
-                    <div><p class="eyebrow">Capabilities</p><h2>A broad stack, organized by responsibility.</h2></div>
-                    <p>I choose technology based on system constraints rather than loyalty to a single language or framework.</p>
-                </div>
-                <div class="skills-grid">
-                    <article class="skill-group" data-reveal><h3>Languages</h3><ul class="clean-list"><li>Python, JavaScript, TypeScript</li><li>Java, C++, C#</li><li>SQL, HTML, CSS</li><li>PowerShell and Bash</li></ul></article>
-                    <article class="skill-group" data-reveal><h3>Backend + data</h3><ul class="clean-list"><li>FastAPI, Django, DRF</li><li>PostgreSQL and Oracle SQL</li><li>Redis and caching patterns</li><li>REST APIs and authentication</li></ul></article>
-                    <article class="skill-group" data-reveal><h3>Frontend</h3><ul class="clean-list"><li>React and Next.js</li><li>Responsive HTML and CSS</li><li>Accessible interaction design</li><li>Axios and API integration</li></ul></article>
-                    <article class="skill-group" data-reveal><h3>Scientific + ML</h3><ul class="clean-list"><li>NumPy, pandas, Xarray</li><li>NetCDF and scientific file design</li><li>scikit-learn and PyTorch</li><li>Visualization and model workflows</li></ul></article>
-                    <article class="skill-group" data-reveal><h3>Infrastructure</h3><ul class="clean-list"><li>Docker and AWS</li><li>S3 and external service APIs</li><li>Git and branch workflows</li><li>Windows and Linux environments</li></ul></article>
-                    <article class="skill-group" data-reveal><h3>Architecture</h3><ul class="clean-list"><li>System and API design</li><li>Queues, caching, and persistence</li><li>Reliability and explicit timeouts</li><li>Security boundaries and observability</li></ul></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-compact">
-            <div class="container">
-                <div class="contact-band" data-reveal>
-                    <div><h2>Looking for an engineer who can move between domain detail and system design?</h2><p>My work is strongest where technical depth, clear architecture, and practical delivery all matter.</p></div>
-                    <a class="button" href="mailto:Bao.n.hoang03@gmail.com">Start a conversation <span class="button-arrow" aria-hidden="true">→</span></a>
-                </div>
+            <div class="actions compact-actions">
+                <a href="https://github.com/BaoNHoang" target="_blank" rel="noopener noreferrer">See projects</a>
+                <a href="mailto:Bao.n.hoang03@gmail.com">Contact me</a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <p class="footer-copy">© <span data-current-year>2026</span> Bao Hoang. Built with HTML, CSS, and JavaScript.</p>
-            <nav class="footer-links" aria-label="Footer navigation"><a href="https://github.com/BaoNHoang" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a><a href="./hobbies.html">Outside work</a></nav>
-        </div>
-    </footer>
+    <footer><p>&copy; 2026 Bao Hoang</p></footer>
 </body>
 </html>
