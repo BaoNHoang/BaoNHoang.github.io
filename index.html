@@ -4,102 +4,236 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bao Hoang | Software Engineer</title>
-    <meta name="description" content="Portfolio of Bao Hoang, a software engineer working across scientific software, machine learning, backend systems, and full-stack applications." />
-    <meta name="keywords" content="Bao Hoang, Software Engineer, NASA, Machine Learning, Python, Full Stack, Portfolio" />
+    <meta name="description" content="Bao Hoang is a software engineer building scientific data systems, machine learning applications, and full-stack products, with current work supporting NASA's CERES mission." />
     <meta name="author" content="Bao Hoang" />
+    <meta name="theme-color" content="#f4f2ed" />
+    <meta property="og:title" content="Bao Hoang | Software Engineer" />
+    <meta property="og:description" content="Scientific software, machine learning, backend systems, and full-stack engineering." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://baonhoang.github.io/" />
+    <script>
+        (() => {
+            const saved = localStorage.getItem("portfolio-theme");
+            const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.dataset.theme = saved || (dark ? "dark" : "light");
+        })();
+    </script>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./video.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Bao Hoang",
+            "url": "https://baonhoang.github.io/",
+            "jobTitle": "Software Engineer",
+            "email": "mailto:Bao.n.hoang03@gmail.com",
+            "sameAs": [
+                "https://github.com/BaoNHoang",
+                "https://www.linkedin.com/in/bao-nguyen-hoang/"
+            ],
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Christopher Newport University"
+            }
+        }
+    </script>
 </head>
 <body>
-    <video id="myVideo" autoplay muted playsinline></video>
-    <div class="video-overlay"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <nav>
-        <ul class="navbuttons">
-            <li><a class="buttons active" href="./index.html">Home</a></li>
-            <li><a class="buttons" href="./career.html">Career</a></li>
-            <li><a class="buttons" href="./education.html">Education</a></li>
-            <li><a class="buttons" href="./background.html">Background</a></li>
-            <li><a class="buttons" href="./hobbies.html">Hobbies</a></li>
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="./index.html" aria-label="Bao Hoang home">
+                <span class="brand-mark" aria-hidden="true">BH</span>
+                <span class="brand-name">Bao Hoang</span>
+            </a>
+
+            <nav aria-label="Primary navigation">
+                <ul class="nav-links">
+                    <li><a class="nav-link" data-nav-link href="./index.html">Home</a></li>
+                    <li><a class="nav-link" data-nav-link href="./career.html">Experience</a></li>
+                    <li><a class="nav-link" data-nav-link href="./projects.html">Projects</a></li>
+                    <li><a class="nav-link" data-nav-link href="./education.html">Education</a></li>
+                    <li><a class="nav-link" data-nav-link href="./background.html">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-button" type="button" data-theme-toggle aria-label="Use dark theme" aria-pressed="false">
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" />
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 15.2A8.4 8.4 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-panel" id="mobile-menu" data-mobile-panel aria-label="Mobile navigation">
+        <ul class="mobile-links">
+            <li><a data-nav-link href="./index.html">Home <span aria-hidden="true">01</span></a></li>
+            <li><a data-nav-link href="./career.html">Experience <span aria-hidden="true">02</span></a></li>
+            <li><a data-nav-link href="./projects.html">Projects <span aria-hidden="true">03</span></a></li>
+            <li><a data-nav-link href="./education.html">Education <span aria-hidden="true">04</span></a></li>
+            <li><a data-nav-link href="./background.html">About <span aria-hidden="true">05</span></a></li>
         </ul>
     </nav>
 
-    <header>
-        <h1>Bao Hoang</h1>
-        <p>Software Engineer | Scientific Computing | Machine Learning</p>
-    </header>
+    <main id="main-content">
+        <section class="container hero">
+            <div class="hero-copy" data-reveal>
+                <p class="eyebrow">Software engineer · Scientific computing · AI systems</p>
+                <h1>I build software for <span>complex data</span> and real-world workflows.</h1>
+                <p class="hero-lede">
+                    I work across scientific data engineering, backend architecture, machine learning, and full-stack development. At NASA Langley, I build software for the CERES Earth science mission and turn large satellite datasets into reliable tools scientists can use.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="./projects.html">Explore my work <span class="button-arrow" aria-hidden="true">→</span></a>
+                    <a class="button" href="./career.html">View experience</a>
+                </div>
+                <p class="availability"><span class="status-dot" aria-hidden="true"></span>Returning to NASA Langley for a second term in Fall 2026</p>
+            </div>
 
-    <main>
-        <section class="content-card">
-            <h2>About Me</h2>
-            <p>
-                I am a software engineer with experience building scientific data-processing tools,
-                machine learning applications, backend APIs, and full-stack systems. I currently work
-                with NASA's CERES Earth science mission, where I develop software for processing and
-                visualizing large satellite datasets and contribute to production-oriented architecture decisions.
-            </p>
-            <p>
-                My interests include distributed systems, scientific software, machine learning infrastructure,
-                backend engineering, and building reliable tools that turn complex data into useful products.
-            </p>
+            <aside class="hero-panel" data-reveal aria-label="Current engineering profile">
+                <div class="panel-label">
+                    <span>Current system profile</span>
+                    <span class="panel-status">Active</span>
+                </div>
+                <div class="system-list">
+                    <div class="system-row"><span class="system-key">MISSION</span><span class="system-value">NASA CERES</span></div>
+                    <div class="system-row"><span class="system-key">FOCUS</span><span class="system-value">Scientific software</span></div>
+                    <div class="system-row"><span class="system-key">DATA</span><span class="system-value">Satellite radiance + cloud properties</span></div>
+                    <div class="system-row"><span class="system-key">STACK</span><span class="system-value">Python · NetCDF · Xarray · NumPy</span></div>
+                    <div class="system-row"><span class="system-key">NEXT</span><span class="system-value">Comparison and ordering platform</span></div>
+                </div>
+                <div class="orbit-mark" aria-hidden="true"></div>
+            </aside>
         </section>
 
-        <section class="content-card">
-            <h2>Featured Projects</h2>
-            <p>Selected public projects that reflect my current technical focus:</p>
-            <div class="project-grid">
-                <a class="project-button" href="https://github.com/BaoNHoang/MedPredict" target="_blank" rel="noopener noreferrer">
-                    MedPredict — Full-Stack ML Platform
-                </a>
-                <a class="project-button" href="https://github.com/BaoNHoang/Orion" target="_blank" rel="noopener noreferrer">
-                    Orion — Local LLM Chatbot
-                </a>
-                <a class="project-button" href="https://github.com/BaoNHoang/Anime_Track" target="_blank" rel="noopener noreferrer">
-                    Anime Tracker — Media Tracking App
-                </a>
-                <a class="project-button" href="https://github.com/BaoNHoang/PlaceToEat" target="_blank" rel="noopener noreferrer">
-                    PlaceToEat — C++ and Python Desktop App
-                </a>
+        <section class="signal-strip" aria-label="Selected results">
+            <div class="signal-item"><p class="signal-value">0.5 TB</p><p class="signal-label">Scientific dataset workflows</p></div>
+            <div class="signal-item"><p class="signal-value">~50%</p><p class="signal-label">Processing-time reduction through sharding and caching</p></div>
+            <div class="signal-item"><p class="signal-value">3.89</p><p class="signal-label">Computer science GPA</p></div>
+            <div class="signal-item"><p class="signal-value">02</p><p class="signal-label">NASA internship terms in 2026</p></div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <div>
+                        <p class="eyebrow">Selected work</p>
+                        <h2>Engineering across research, data, and products.</h2>
+                    </div>
+                    <p>My strongest work sits at the boundary between domain-heavy problems and maintainable software systems.</p>
+                </div>
+
+                <div class="work-grid">
+                    <a class="work-card work-card-featured" href="./projects.html#ceres-toolkit" data-reveal>
+                        <p class="card-kicker">NASA · Scientific data engineering</p>
+                        <h3>CERES radiance processing toolkit</h3>
+                        <p>Modular Python and NetCDF workflows that reconstruct hyperspectral radiances, organize scene data into shards, validate scientific products, and support repeatable plotting and analysis.</p>
+                        <div class="data-visual" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="card-meta"><span>Python</span><span>NetCDF</span><span>Xarray</span><span>NumPy</span></div>
+                    </a>
+
+                    <a class="work-card" href="https://github.com/BaoNHoang/MedPredict" target="_blank" rel="noopener noreferrer" data-reveal>
+                        <p class="card-kicker">Full-stack machine learning</p>
+                        <h3>MedPredict</h3>
+                        <p>A Dockerized health-risk demonstration platform with authenticated user workflows, prediction history, a FastAPI inference layer, PostgreSQL, and a Next.js interface.</p>
+                        <div class="card-meta"><span>Next.js</span><span>FastAPI</span><span>PostgreSQL</span><span>AWS</span></div>
+                    </a>
+
+                    <a class="work-card" href="https://github.com/BaoNHoang/Orion" target="_blank" rel="noopener noreferrer" data-reveal>
+                        <p class="card-kicker">Local-first AI</p>
+                        <h3>Orion</h3>
+                        <p>A private personal assistant built around persistent conversations, consent-based memory, local Ollama models, voice interaction, workspaces, and selective web research.</p>
+                        <div class="card-meta"><span>Node.js</span><span>Ollama</span><span>SQLite</span><span>Local-first</span></div>
+                    </a>
+
+                    <a class="work-card work-card-featured" href="https://ceres.larc.nasa.gov/instruments/demeter/" target="_blank" rel="noopener noreferrer" data-reveal>
+                        <p class="card-kicker">NASA · Web design and communication</p>
+                        <h3>DEMETER mission website</h3>
+                        <p>Designed and developed public-facing CERES pages for the upcoming DEMETER instrument with Jeet Patel, translating technical mission material into a clear, accessible web experience.</p>
+                        <div class="card-meta"><span>Information architecture</span><span>UI design</span><span>WordPress</span><span>Accessibility</span></div>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="content-card">
-            <h2>Current Focus</h2>
-            <ul class="future-projects">
-                <li>
-                    <strong>Scientific Software Engineering</strong>
-                    <span>Designing reusable Python tooling for large NetCDF datasets, data sharding, plotting, validation, and remote scientific workflows.</span>
-                </li>
-                <li>
-                    <strong>Reliable AI Systems</strong>
-                    <span>Learning production chatbot architecture, including retrieval, caching, persistence, queues, explicit timeouts, and model adapters.</span>
-                </li>
-                <li>
-                    <strong>System Design</strong>
-                    <span>Studying scalable APIs, distributed data systems, caching, event-driven workflows, observability, and production architecture trade-offs.</span>
-                </li>
-            </ul>
+        <section class="section section-rule">
+            <div class="container split">
+                <div class="sticky-copy" data-reveal>
+                    <p class="eyebrow">Experience snapshot</p>
+                    <h2 class="content-title">Built in research labs, startups, and production support environments.</h2>
+                    <p class="content-intro">Each role strengthened a different layer of my engineering practice: scientific correctness, product delivery, database-backed applications, or dependable operations.</p>
+                    <div class="hero-actions"><a class="button" href="./career.html">Full experience</a></div>
+                </div>
+
+                <div class="timeline" data-reveal>
+                    <article class="timeline-item">
+                        <p class="timeline-date">2026 — Present</p>
+                        <div><h3>NASA Langley Research Center</h3><p>Scientific software and architecture for CERES satellite-data workflows.</p></div>
+                    </article>
+                    <article class="timeline-item">
+                        <p class="timeline-date">2026</p>
+                        <div><h3>Rhovah</h3><p>Full-stack development with Django, Next.js, PostgreSQL, S3, and external APIs.</p></div>
+                    </article>
+                    <article class="timeline-item">
+                        <p class="timeline-date">2025 — Present</p>
+                        <div><h3>Christopher Newport University IT</h3><p>Identity, endpoint, and technical support across Windows, macOS, Linux, Azure AD, and LDAP.</p></div>
+                    </article>
+                    <article class="timeline-item">
+                        <p class="timeline-date">2024 — 2025</p>
+                        <div><h3>Jefferson Lab</h3><p>ColdFusion and Oracle SQL applications that replaced manual request workflows.</p></div>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section class="content-card">
-            <h2>Contact</h2>
-            <p>
-                Email:
-                <a class="email-link" href="mailto:Bao.n.hoang03@gmail.com">Bao.n.hoang03@gmail.com</a>
-            </p>
+        <section class="section">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <div><p class="eyebrow">Technical range</p><h2>From raw data to deployed systems.</h2></div>
+                    <p>I prefer architecture that is explicit, testable, observable, and understandable by the next engineer who inherits it.</p>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-group" data-reveal><h3>Scientific + ML</h3><ul class="clean-list"><li>Python, NumPy, pandas, Xarray</li><li>NetCDF, SRFs, radiance workflows</li><li>scikit-learn and PyTorch</li><li>Data validation and visualization</li></ul></article>
+                    <article class="skill-group" data-reveal><h3>Application engineering</h3><ul class="clean-list"><li>Next.js, React, JavaScript</li><li>FastAPI, Django, REST APIs</li><li>PostgreSQL, Oracle SQL, Redis</li><li>Authentication and session design</li></ul></article>
+                    <article class="skill-group" data-reveal><h3>Systems + operations</h3><ul class="clean-list"><li>Docker and AWS</li><li>Git and CI-oriented workflows</li><li>PowerShell, Windows, Linux</li><li>Caching, queues, observability</li></ul></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-compact">
+            <div class="container">
+                <div class="contact-band" data-reveal>
+                    <div>
+                        <h2>Let’s build software that makes difficult work simpler.</h2>
+                        <p>I am interested in software engineering, scientific computing, backend systems, machine learning infrastructure, and research-focused product work.</p>
+                    </div>
+                    <a class="button" href="mailto:Bao.n.hoang03@gmail.com">Email me <span class="button-arrow" aria-hidden="true">→</span></a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank" rel="noopener noreferrer">
-                <img src="./linkedin.jpg" alt="LinkedIn" />
-            </a>
-            <a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <img src="./resume.png" alt="Resume" />
-            </a>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p class="footer-copy">© <span data-current-year>2026</span> Bao Hoang. Built with HTML, CSS, and JavaScript.</p>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="https://github.com/BaoNHoang" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/bao-nguyen-hoang/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://docs.google.com/document/d/1rduyP2BvTEodvhd8mnWoQPnZu_r7Wff6oX1D39iz_TY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="./hobbies.html">Outside work</a>
+            </nav>
         </div>
-        <div id="copyright"><p>&copy; 2026 Bao Hoang. All rights reserved.</p></div>
     </footer>
 </body>
 </html>
